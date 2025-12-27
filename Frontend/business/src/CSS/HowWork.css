@@ -1,0 +1,120 @@
+.process {
+  padding: 80px 20px;
+  background-color: #ffffff;
+}
+
+.process-container {
+  max-width: 1200px;
+  margin: auto;
+  text-align: center;
+}
+
+.process-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #111;
+}
+
+.process-subtitle {
+  margin-top: 10px;
+  font-size: 1.1rem;
+  color: #555;
+}
+
+.process-steps {
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+}
+
+.process-card {
+  
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+  background: #f9f9f9;
+  padding: 35px 25px;
+  border-radius: 18px;
+  transition: all 0.3s ease;
+}
+
+.process-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.68);
+}
+
+.step-number {
+  display: inline-block;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #2563eb;
+  margin-bottom: 15px;
+}
+
+.process-card h3 {
+  font-size: 1.25rem;
+  color: #111;
+  margin-bottom: 8px;
+}
+
+.process-card p {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* Tablet */
+@media (max-width: 992px) {
+  .process-steps {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+  .process {
+    padding: 60px 15px;
+  }
+
+  .process-title {
+    font-size: 2rem;
+  }
+
+  .process-steps {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+@media(max-width:768px) {
+  .process-card{
+    box-shadow: none;
+  }
+  .process-card:hover{
+    box-shadow: none;
+  }
+}
+
+
+
+
+.process-card {
+  background: #f9f9f9;
+  padding: 35px 25px;
+  border-radius: 18px;
+  transition: all 0.6s ease-out;
+
+  /* Initial state */
+  opacity: 0;
+  transform: translateY(50px);
+}
+
+.process-card.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Optional: stagger effect */
+.process-steps .process-card:nth-child(1).show { transition-delay: 0.1s; }
+.process-steps .process-card:nth-child(2).show { transition-delay: 0.2s; }
+.process-steps .process-card:nth-child(3).show { transition-delay: 0.3s; }
+.process-steps .process-card:nth-child(4).show { transition-delay: 0.4s; }

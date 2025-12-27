@@ -1,0 +1,166 @@
+/* Navbar main container */
+.navbar {
+    font-family: sans-serif;
+    color: #2563eb;
+    /* width: 100%; */
+    height: 70px;
+    padding: 0 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #ffffff;
+    border-bottom: 1px solid #e5e7eb;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+/* Logo container */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.logo img {
+    height: 42px;
+    width: auto;
+}
+
+.logo h2 {
+    font-size: 29px;
+    font-family: 'Style Script', cursive;
+    font-weight: 700;
+    color: #2563eb;
+    /* Primary brand color */
+    margin: 0;
+}
+
+/* Navigation links */
+.navbar ul {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+    list-style: none;
+}
+
+.navbar ul li {
+    font-size: 18px;
+    margin-top: 5px;
+    font-weight: 500;
+    color: #0f172a;
+    cursor: pointer;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+/* Hover underline effect */
+.navbar ul li::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 0;
+    height: 2px;
+    background-color: #2563eb;
+    transition: width 0.3s ease;
+}
+.linkk{
+    text-decoration: none;
+}
+.navbar ul li:hover::after {
+    width: 100%;
+}
+
+.navbar ul li:hover {
+    color: #2563eb;
+}
+
+/* Buttons container */
+.buttons {
+    display: flex;
+    gap: 15px;
+}
+
+/* Login button */
+.login {
+    font-family: 'Style Script', cursive;
+    font-weight: 400;
+    padding: 8px 18px;
+    border: 1px solid #2563eb;
+    background: transparent;
+    color: #2563eb;
+    border-radius: 6px;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.login:hover {
+    background-color: #2563eb;
+    color: #ffffff;
+}
+
+/* Signup button */
+.signup {
+    padding: 8px 18px;
+    
+    font-family: 'Style Script', cursive;
+    font-weight: 600;   
+    border: none;
+    background-color: #2563eb;
+    color: #ffffff;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.signup:hover {
+    background-color: #1d4ed8;
+}
+
+/* Responsive design */
+@media (max-width: 900px) {
+    .navbar {
+        padding: 0 20px;
+    }
+
+    .navbar ul {
+        display: none;
+        /* Hide links on small screens, show hamburger later */
+    }
+
+    .buttons {
+        gap: 8px;
+    }
+
+    .logo h2 {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 600px) {
+    .navbar {
+        height: 60px;
+        padding: 0 15px;
+    }
+
+    .logo img {
+        height: 36px;
+    }
+
+    .logo h2 {
+        font-size: 18px;
+    }
+
+    .login,
+    .signup {
+        padding: 6px 12px;
+        font-size: 13px;
+    }
+}

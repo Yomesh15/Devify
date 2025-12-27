@@ -1,0 +1,139 @@
+.about {
+  padding: 80px 20px;
+  background-color: #f8fafc;
+}
+
+.about-container {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+/* Initial state: hidden and offscreen */
+.about-left {
+  opacity: 0;
+  transform: translateX(-50px); /* slide from left */
+  transition: all 0.6s ease-out;
+}
+
+.about-right {
+  opacity: 0;
+  transform: translateX(50px); /* slide from right */
+  transition: all 0.6s ease-out;
+}
+
+/* When visible */
+.about-left.show {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.about-right.show {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Optional: responsive tweaks */
+@media (max-width: 992px) {
+  .about-container {
+    flex-direction: column;
+  }
+  .about-left, .about-right {
+    transform: translateY(50px); /* slide from bottom on mobile */
+  }
+}
+
+
+/* Left Image */
+.about-left img {
+  width: 100%;
+  border-radius: 20px;
+  object-fit: cover;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    transition: 0.5s;
+}
+.about-left img:hover{
+    transform: translateY(-10px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.67);
+}
+
+/* Right Content */
+.about-right h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #111;
+  margin-bottom: 15px;
+}
+
+.about-right p {
+  font-size: 1.05rem;
+  color: #555;
+  margin-bottom: 25px;
+  line-height: 1.6;
+}
+
+.about-list {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 25px;
+}
+
+.about-list li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+  font-size: 1rem;
+  color: #333;
+}
+
+.about-list svg {
+  color: #2563eb;
+}
+
+/* Button */
+.about-right .btn {
+  padding: 12px 28px;
+  background-color: #2563eb;
+  color: #fff;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.about-right .btn:hover {
+  background-color: #1e40af;
+}
+
+/* Tablet */
+@media (max-width: 992px) {
+  .about-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-right .btn {
+    margin-top: 20px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+  .about {
+    padding: 60px 15px;
+  }
+
+  .about-right h2 {
+    font-size: 2rem;
+  }
+}
+
+
+@media(max-width:768px) {
+ .about-left img{
+  box-shadow: none;
+ }
+}

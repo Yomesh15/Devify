@@ -1,0 +1,119 @@
+.cta {
+  padding: 80px 20px;
+  background: linear-gradient(135deg, #80a7fa, #455075);
+  color: #ffffff;
+  text-align: center;
+}
+
+.link {
+  text-decoration: none;
+  position: relative;
+  top: 16px;
+}
+
+
+.cta-container {
+  max-width: 900px;
+  margin: auto;
+}
+
+.cta h2 {
+  font-size: 2.6rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.cta p {
+  font-size: 1.1rem;
+  color: #e5e7eb;
+  margin-bottom: 35px;
+  line-height: 1.6;
+}
+
+.cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.btn {
+  padding: 14px 30px;
+  border-radius: 30px;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.btn.primary {
+  background: #ffffff;
+  color: #2563eb;
+}
+
+.btn.primary:hover {
+  background: #f1f5f9;
+}
+
+.btn.secondary {
+  border: 2px solid #ffffff;
+  color: #ffffff;
+}
+
+.btn.secondary:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+  .cta h2 {
+    font-size: 2.2rem;
+  }
+
+  .btn.primary {
+    width: 254px;
+    margin-left: 30px;
+  }
+
+  .btn.secondary {
+    width: 254px;
+    margin-left: 30px;
+  }
+
+  .cta p {
+    font-size: 1rem;
+  }
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+  .cta {
+    padding: 60px 15px;
+  }
+
+  .cta-buttons {
+    flex-direction: column;
+  }
+
+  .btn {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+
+
+.cta-container {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.6s ease-out;
+}
+
+.cta-container.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Optional stagger delay for buttons */
+.cta-buttons .btn {
+  transition: all 0.4s ease-out;
+}

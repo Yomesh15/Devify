@@ -1,0 +1,149 @@
+.why {
+  padding: 80px 20px;
+  background-color: #f8fafc;
+}
+
+.why-container {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  gap: 50px;
+  align-items: center;
+}
+
+/* LEFT */
+.why-left h2 {
+  font-size: 2.5rem;
+  color: #111;
+  margin-bottom: 15px;
+}
+
+.why-left p {
+  font-size: 1.05rem;
+  color: #555;
+  margin-bottom: 25px;
+  max-width: 520px;
+}
+
+.why-list {
+  list-style: none;
+  padding: 0;
+}
+
+.why-list li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+  font-size: 1rem;
+  color: #333;
+}
+
+.why-list svg {
+  color: #2563eb;
+  font-size: 1.1rem;
+}
+
+/* RIGHT */
+.why-right {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.stat-card {
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+  transition: all 0.3s ease;
+}
+.stat-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.68);
+}
+
+.stat-card h3 {
+  font-size: 2rem;
+  color: #2563eb;
+}
+
+.stat-card p {
+  margin-top: 8px;
+  color: #555;
+  font-size: 0.95rem;
+}
+
+/* Tablet */
+@media (max-width: 992px) {
+  .why-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .why-left p {
+    margin: auto;
+    margin-bottom: 25px;
+  }
+
+  .why-list li {
+    justify-content: center;
+  }
+
+  .why-right {
+    grid-template-columns: repeat(3, 1fr);
+    width: 100%;
+  }
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+  .why {
+    padding: 60px 15px;
+  }
+
+  .why-left h2 {
+    font-size: 2rem;
+  }
+
+  .why-right {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+@media(max-width:768px) {
+  .stat-card{
+    box-shadow: none;
+  }
+  .stat-card:hover{
+    box-shadow: none;
+  }
+}
+
+
+
+
+
+/* Existing styles remain, add this for scroll effect */
+
+/* Initial state */
+.why-left, .why-right, .stat-card {
+  opacity: 0;
+  transform: translateY(50px); /* slide from bottom */
+  transition: all 0.6s ease-out;
+}
+
+/* When visible */
+.why-left.show, .why-right.show, .stat-card.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Optional stagger effect */
+.why-left.show { transition-delay: 0.1s; }
+.why-right.show { transition-delay: 0.2s; }
+.stat-card:nth-child(1).show { transition-delay: 0.3s; }
+.stat-card:nth-child(2).show { transition-delay: 0.4s; }
+.stat-card:nth-child(3).show { transition-delay: 0.5s; }
