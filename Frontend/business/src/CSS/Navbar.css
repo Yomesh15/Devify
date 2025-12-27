@@ -73,6 +73,9 @@
 .navbar ul li:hover::after {
     width: 100%;
 }
+.link2{
+    text-decoration: none;
+}
 
 .navbar ul li:hover {
     color: #2563eb;
