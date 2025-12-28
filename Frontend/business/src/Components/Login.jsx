@@ -28,8 +28,10 @@ const Login = () => {
       );
 
       if (res.data.success) {
+        localStorage.setItem("token", res.data.token);
+
         alert("Login successful ✅");
-        navigate("/"); 
+        navigate("/");   
       } else {
         alert("Invalid credentials ❌");
       }
@@ -38,6 +40,7 @@ const Login = () => {
       alert("Login failed ❌");
     }
   };
+
 
   return (
     <div className="auth-container">
