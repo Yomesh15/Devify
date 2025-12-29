@@ -4,9 +4,9 @@ import { Link, useNavigate, useLocation } from 'react-router-dom'
 
 const Navbar = () => {
   const navigate = useNavigate()
-  const location = useLocation() // track route changes
+  const location = useLocation() 
 
-  // Check token every render
+  // ccheck token every renderr
   const isLoggedIn = !!localStorage.getItem("token")
 
   const handleLogout = () => {
